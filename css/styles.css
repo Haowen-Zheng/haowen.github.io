@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -146,18 +147,17 @@ main section{
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
-    font-family: 'Bandeins-Strange', sans-serif;
+    font-family: 'Righteous', cursive;
     font-size: 20px;
     color: #12161F;
     min-width: 300px;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 8px;
     text-decoration: none;
 }
 .content button:hover{
     color: #AE7BFF;
 }
-
 main section#home .content{
     min-height: 50vh;
     display: flex;
@@ -345,13 +345,21 @@ main section#work, main section#about, main section#contact{
 #contact h3, #contact h4{
     text-align: center;
 }
+
 #contact .wrapper{
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 /* .contact-left form{
     display: flex;
     flex-direction: column;
@@ -364,6 +372,7 @@ main section#work, main section#about, main section#contact{
 
 .contact-left{
     flex-basis: 50%;
+
 }
 .contact-left label{
     display: block;
@@ -373,23 +382,39 @@ main section#work, main section#about, main section#contact{
     width: 100%;
     padding-bottom: 10px;
     border-radius: 8px;
+    border: 2px solid white;
+    background: transparent;
 }
 
 .contact-left form textarea{
     width: 100%;
     padding-bottom: 10px;
     border-radius: 8px;
+    border: 2px solid white;
+    background: transparent;
+}
+
+.contact-left form input:hover, .contact-left form textarea:hover{
+    border: 2px solid #C9FFC2;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #000000;
+    opacity: .8;
+    transition: .3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .contact-left button{
     width: 100%;
     background-color: #C9FFC2;
     font-family: 'Righteous', cursive;
+    border-radius: 8px;
 }
 
 .contact-left button:hover{
     color: #AE7BFF;
 }
+
 .contact-right .social-links i{
     color: #C9FFC2;
     font-size: 25px;
@@ -398,6 +423,8 @@ main section#work, main section#about, main section#contact{
 .contact-right .social-links i:hover{
     color: #AE7BFF;
 }
+
+
 
 /* .contact-right{
     flex-basis: 50%;
