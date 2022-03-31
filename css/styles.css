@@ -165,13 +165,7 @@ main section#home .content{
     justify-content: center;
     align-items: center;
 }
-main section#work .wrapper h3{
-    display: block;
-    font-size: 12.639vw;
-    line-height: 12.639vw;
-}
-
-main section#about .wrapper h3{
+main section#work .wrapper h3, main section#about .wrapper h3, main section#practices .wrapper h3{
     display: block;
     font-size: 12.639vw;
     line-height: 12.639vw;
@@ -197,8 +191,10 @@ main section#work, main section#about, main section#contact{
     border-radius: 10px;
 }
 .row{
-    display: flex;
-    flex-wrap: wrap;
+    display:grid;
+    place-items:center;
+    /* display: flex;
+    flex-wrap: wrap; */
     padding: 0px 37.5px 60px 37.5px;
     border-radius: 8px;
 }
@@ -207,6 +203,35 @@ main section#work, main section#about, main section#contact{
     font-family: 'Righteous', cursive;
     text-align: center;
 }
+
+.work-column img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+}
+
+.work-column{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.work-column:hover img {
+    opacity:0.3;
+}
+
+.work-column img:hover {
+    transform:perspective(800px)   rotateY(0deg);
+    opacity:1;
+}
+/* .column img:hover{
+    transform: scale(1.1);
+} */
 
 .column{
     flex: 33%;
@@ -222,12 +247,6 @@ main section#work, main section#about, main section#contact{
 .column img{
     width: 100%;
     vertical-align:middle;
-    margin-top: 8px;
-    transition:  ease-in-out 0.6s;
-}
-
-.column img:hover{
-    transform: scale(1.1);
 }
 
 .grid{
@@ -242,7 +261,7 @@ main section#work, main section#about, main section#contact{
 }
 .grid img{
     width: 100%;
-    box-shadow: 5px 5px#AE7BFF;
+    box-shadow: 5px 5px #AE7BFF;
 }
 .grid img:hover{
     transform: none;
